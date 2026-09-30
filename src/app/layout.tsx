@@ -6,12 +6,19 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
   ),
+
+  verification: {
+    google: "bQ0kEfnnf3Hf8knYe4eZYe-8-fGh_5mwSOctsVSG2O0",
+  },
+
   title: {
     default: "Searchlight — SEO Opportunity Analyzer",
     template: "%s · Searchlight",
   },
+
   description:
     "Find evidence-backed SEO opportunities using website, search, competitor, and keyword research.",
+
   openGraph: {
     type: "website",
     title: "Searchlight — SEO Opportunity Analyzer",
@@ -25,6 +32,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Searchlight — SEO Opportunity Analyzer",
