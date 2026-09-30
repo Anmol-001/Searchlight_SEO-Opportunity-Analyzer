@@ -11,6 +11,9 @@ import {
 import { BrandMark } from "@/components/brand-mark";
 import { Button } from "@/components/ui/button";
 
+const CALENDLY_URL =
+  "https://calendly.com/anmolkumar2003-work/30-minute-discovery-call";
+
 const analysisLenses = [
   {
     icon: FileSearch,
@@ -37,6 +40,19 @@ export default function Home() {
         <nav className="flex items-center gap-2" aria-label="Primary navigation">
           <Button asChild variant="ghost" className="hidden sm:inline-flex">
             <Link href="/history">Past assessments</Link>
+          </Button>
+          <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Link href="/contact">Contact me</Link>
+          </Button>
+          <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Book a 30-minute discovery call"
+            >
+              Book a call
+            </a>
           </Button>
           <Button asChild size="sm">
             <Link href="/assess">

@@ -6,6 +6,7 @@ const contentSecurityPolicy = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${production ? "" : " 'unsafe-eval'"}`,
   "img-src 'self' data: blob: https://www.googletagmanager.com",
+  "frame-src 'self' https://calendly.com",
   "font-src 'self' data:",
   "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com",
   "object-src 'none'",

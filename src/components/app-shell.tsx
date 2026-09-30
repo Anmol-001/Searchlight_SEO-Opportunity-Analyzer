@@ -5,6 +5,9 @@ import type { ReactNode } from "react";
 import { BrandMark } from "@/components/brand-mark";
 import { Button } from "@/components/ui/button";
 
+const CALENDLY_URL =
+  "https://calendly.com/anmolkumar2003-work/30-minute-discovery-call";
+
 export function AppShell({
   children,
   backHref,
@@ -30,6 +33,19 @@ export function AppShell({
             ) : null}
             <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
               <Link href="/history">Past assessments</Link>
+            </Button>
+            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+              <Link href="/contact">Contact me</Link>
+            </Button>
+            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a 30-minute discovery call"
+              >
+                Book a call
+              </a>
             </Button>
           </div>
         </div>
