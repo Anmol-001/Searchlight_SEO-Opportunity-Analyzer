@@ -8,6 +8,7 @@ type CalendlyMessage = {
 
 type DataLayerEvent = {
   event: string;
+  meeting_type?: string;
 };
 
 declare global {
@@ -42,7 +43,11 @@ export function CalendlyEventTracker() {
       if (!eventName) return;
 
       window.dataLayer ??= [];
-      window.dataLayer.push({ event: eventName });
+      window.dataLayer.push(
+        eventName === "calendly_event_scheduled"
+          ? { event: eventName, meeting_type: "30-minute discovery call" }
+          : { event: eventName },
+      );
     }
 
     window.addEventListener("message", handleMessage);
