@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { AppShell } from "@/components/app-shell";
 import { CalendlyEventTracker } from "@/components/calendly-event-tracker";
+import { CalendlyInlineWidget } from "@/components/calendly-inline-widget";
 import { Button } from "@/components/ui/button";
 
 const CALENDLY_URL =
@@ -51,15 +52,7 @@ export default function ContactPage() {
           </div>
 
           <div className="overflow-hidden bg-white">
-            <iframe
-              src={CALENDLY_URL}
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Schedule a 30-minute discovery call"
-              loading="lazy"
-              className="block min-h-[700px] w-full border-0"
-            />
+            <CalendlyInlineWidget url={CALENDLY_URL} />
           </div>
         </section>
       </div>

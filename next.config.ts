@@ -4,7 +4,7 @@ const production = process.env.NODE_ENV === "production";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${production ? "" : " 'unsafe-eval'"}`,
+  `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://assets.calendly.com${production ? "" : " 'unsafe-eval'"}`,
   "img-src 'self' data: blob: https://www.googletagmanager.com",
   "frame-src 'self' https://calendly.com",
   "font-src 'self' data:",
