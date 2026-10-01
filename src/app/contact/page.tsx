@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 
 import { AppShell } from "@/components/app-shell";
+import { CalendlyEventTracker } from "@/components/calendly-event-tracker";
 import { Button } from "@/components/ui/button";
 
 const CALENDLY_URL =
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <AppShell backHref="/" backLabel="Home">
+      <CalendlyEventTracker />
       <div className="mx-auto w-full max-w-5xl px-5 py-10 sm:px-8 sm:py-14 lg:px-10 lg:py-20">
         <div className="max-w-2xl">
           <p className="eyebrow text-emerald-700">Let&apos;s talk</p>
