@@ -34,10 +34,10 @@ export function AppShell({
             <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
               <Link href="/history">Past assessments</Link>
             </Button>
-            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex" data-gtm="contact-me">
               <Link href="/contact">Contact me</Link>
             </Button>
-            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
+            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex" data-gtm="book-call">
               <a
                 href={CALENDLY_URL}
                 target="_blank"
